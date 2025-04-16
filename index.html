@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDULIFEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?1" />
+  </head>
+  <body>
+    <div id="container">
+      <div
+        id="background"
+        style="background-image: url(/assets/images/bg1.jpg)"
+      ></div>
+      <div id="filter"></div>
+      <div class="data">
+        <div class="linfo">
+          <h2>VIRTUAL FIELD TRIP FOR</h2>
+          <h1>ENVIRONMENTAL EDUCATION EDULIFEA</h1>
+          <div class="description">
+            Merupakan media pembelajaran virtual field trip yang dirancang untuk
+            mendukung pemahaman siswa mengenai perubahan lingkungan. Menggunakan
+            model Problem Based Learning (PBL), media ini menyajikan konten
+            kontekstual yang menghubungkan konsep pembelajaran dengan fenomena
+            lingkungan nyata. Tampilan media yang interaktif dan eksplorasi
+            isu-isu lingkungan terkini, EDULIFEA tidak hanya meningkatkan
+            literasi lingkungan siswa tetapi juga menumbuhkan kesadaran dan
+            kepedulian mereka terhadap lingkungan secara lebih mendalam.
+          </div>
+          <div class="butnav">
+            <button
+              class="btn"
+              onclick="showCandt()"
+              style="grid-column: span 2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+                />
+              </svg>
+              Capaian & Tujuan
+            </button>
+
+            <button class="btn petunjuk" onclick="showPetunjuk()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M11 17h2v-6h-2zm1-8q.425 0 .713-.288T13 8t-.288-.712T12 7t-.712.288T11 8t.288.713T12 9m0 13q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+                />
+              </svg>
+              Petunjuk
+            </button>
+            <a class="btn" href="/tour/bromo/" style="background-color: #f44336"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m9.5 16.5l7-4.5l-7-4.5zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+                />
+              </svg>
+              Explore</a
+            >
+          </div>
+        </div>
+        <div class="rinfo owl-carousel owl-theme">
+          <div class="items">
+            <div class="item">
+              <img src="/assets/images/bromo.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- start petunjuk -->
+      <div id="petunjuk">
+        <div class="header">
+          <h4 class="judul"></h4>
+          <button class="close" onclick="closePetunjuk()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m12 13.4l2.9 2.9q.275.275.7.275t.7-.275t.275-.7t-.275-.7L13.4 12l2.9-2.9q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275L12 10.6L9.1 7.7q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l2.9 2.9l-2.9 2.9q-.275.275-.275.7t.275.7t.7.275t.7-.275zm0 8.6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="petunjuk-container">
+          <div class="header">
+            <img
+              src="/assets/images/logo-um-terbaru-2015-biru.png"
+              alt="Logo UM"
+              class="logo"
+            />
+            <h1>PETUNJUK PENGGUNAAN</h1>
+          </div>
+          <p>
+            Media ini dapat dioperasikan menggunakan
+            <strong>Windows/MacOs</strong> atau <strong>Android/iOS</strong
+            ><br />
+            <em>Virtual Field Trip - Perubahan Lingkungan Cangar</em> dapat
+            dibuka melalui website <strong>edulifea.my.id</strong> secara online
+          </p>
+
+          <div class="langkah">
+            <p><strong>Langkah-Langkah Pembelajaran:</strong></p>
+            <ol>
+              <li>
+                <strong>Memulai:</strong><br />
+                Saat membuka VFT, tampilan awal (Home Screen) akan menunjukkan
+                spot masuk utama di Cangar.<br />
+                Navigasi di layar kiri menyediakan akses ke fitur: Deskripsi,
+                Petunjuk Penggunaan, Tujuan Pembelajaran, Lokasi, dan Feedback.
+              </li>
+              <li>
+                <strong>Mulai Eksplorasi:</strong><br />
+                Gunakan Hotspot untuk mengakses informasi tambahan yang ada di
+                media
+              </li>
+              <div class="buttons">
+                <div class="btn">
+                  <img src="/assets/images/next.png" />Mengakses Spot
+                  Selanjutnya
+                </div>
+                <div class="btn">
+                  <img src="/assets/images/info.png" />Membuka Materi/Tugas
+                  Investigasi
+                </div>
+                <div class="btn">
+                  <img src="/assets/images/video-images.png" />Membuka
+                  Video/Foto Pembelajaran
+                </div>
+              </div>
+              <li>
+                <strong>Menyelesaikan Pembelajaran:</strong><br />
+                Setelah eksplorasi selesai, klik Feedback untuk memberikan
+                masukan mengenai pengalaman belajar.<br />
+                Setelah selesai, keluar dari situs web VFT.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- end petunjuk -->
+      <!-- start capaian dan tujuan -->
+      <div id="candt">
+        <div class="header">
+          <h4 class="judul"></h4>
+          <button class="close" onclick="closeCandt()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="m12 13.4l2.9 2.9q.275.275.7.275t.7-.275t.275-.7t-.275-.7L13.4 12l2.9-2.9q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275L12 10.6L9.1 7.7q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l2.9 2.9l-2.9 2.9q-.275.275-.275.7t.275.7t.7.275t.7-.275zm0 8.6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="content">
+          <h5>Capaian Pembelajaran</h5>
+          <p>
+            Pada akhir fase E, peserta didik memahami proses klasifikasi makhluk
+            hidup; peranan virus, bakteri, dan jamur dalam kehidupan; ekosistem
+            dan interaksi antarkomponen serta faktor yang mempengaruhi; dan
+            pemanfaatan bioteknologi dalam berbagai bidang kehidupan. Peserta
+            didik memahami sistem pengukuran dalam kerja ilmiah; energi
+            alternatif dan pemanfaatannya untuk mengatasi permasalahan
+            ketersediaan energi. Peserta didik memahami struktur atom dan
+            kaitannya dengan sifat unsur dalam tabel periodik; serta memahami
+            reaksi kimia, hukum hukum dasar kimia, dan perannya dalam kehidupan
+            sehari-hari. Peserta didik menerapkan pemahaman IPA untuk mengatasi
+            permasalahan berkaitan dengan perubahan iklim.
+          </p>
+          <br />
+          <h5>Tujuan Pembelajaran</h5>
+          <p>
+            Melalui kegiatan pembelajaran dengan model Problem Based Learning
+            (PBL), peserta didik diharapkan dapat:
+          </p>
+          <ol>
+            <li>
+              Menjelaskan fenomena perubahan lingkungan serta hubungan timbal
+              balik antara manusia dengan lingkungan dalam menjaga keseimbangan
+              ekosistem secara tepat.
+            </li>
+            <li>
+              Mengidentifikasi berbagai bentuk perubahan lingkungan yang
+              disebabkan oleh faktor alami maupun akibat aktivitas manusia
+              dengan tepat.
+            </li>
+            <li>
+              Menganalisis penyebab dan dampak perubahan lingkungan terhadap
+              ekosistem dan kehidupan manusia secara berkelompok dengan cermat.
+            </li>
+            <li>
+              Menciptakan solusi kreatif dan inovatif dalam bentuk infografis
+              untuk mengatasi permasalahan lingkungan dari hasil investigasi
+              secara berkelompok dengan cermat.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <!-- end capaian dan tujuan -->
+      <div class="footer">
+        <p>Copyright © 2025 Diajeng Kusuma Citra. All rights reserved.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
